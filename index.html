@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCore | Hardware & Periféricos</title>
+    <link rel="stylesheet" href="/css/stlyle.css">
+    <!-- Ícones via FontAwesome CDN para estética moderna -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR FIXA COM MENUS ANIMADOS -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo" data-target="home">
+                <i class="fa-solid fa-microchip"></i> Tech<span>Core</span>
+            </a>
+
+            <button class="mobile-menu-btn" aria-label="Abrir Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active" data-target="home">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#notebooks" class="nav-link" data-target="notebooks">
+                            Notebooks <i class="fa-solid fa-chevron-down arrow"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#notebooks" data-target="notebooks">Linha Gamer</a></li>
+                            <li><a href="#notebooks" data-target="notebooks">Workstations</a></li>
+                            <li><a href="#notebooks" data-target="notebooks">Ultrabooks</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#placas" class="nav-link" data-target="placas">Placas de Vídeo</a></li>
+                    <li><a href="#perifericos" class="nav-link" data-target="perifericos">Periféricos</a></li>
+                    <li><a href="#contato" class="nav-link" data-target="contato">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="cart-btn" id="cart-toggle" aria-label="Carrinho">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL (SIMULAÇÃO DE PÁGINAS SPA) -->
+    <main id="app-content">
+
+        <!-- PÁGINA 1: HOME -->
+        <section id="home" class="page-section active">
+            <!-- CARROSSEL DE DESTAQUES -->
+            <div class="carousel">
+                <div class="carousel-track">
+                    <div class="carousel-slide active" style="background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1587202372634-32705e3bf49c?auto=format&fit=crop&w=1600&q=80');">
+                        <div class="slide-content">
+                            <span class="badge">Nova Geração</span>
+                            <h1>Placas de Vídeo Série RTX 50</h1>
+                            <p>Desempenho extremo com Ray Tracing de última geração e DLSS 4.</p>
+                            <button class="btn-primary" data-target="placas">Ver Ofertas</button>
+                        </div>
+                    </div>
+                    <div class="carousel-slide" style="background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=1600&q=80');">
+                        <div class="slide-content">
+                            <span class="badge">Setup Completo</span>
+                            <h1>Periféricos Mecânicos & Wireless</h1>
+                            <p>Precisão milimétrica para jogos competitivos e produtividade.</p>
+                            <button class="btn-primary" data-target="perifericos">Explorar Linha</button>
+                        </div>
+                    </div>
+                    <div class="carousel-slide" style="background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=1600&q=80');">
+                        <div class="slide-content">
+                            <span class="badge">Mobilidade</span>
+                            <h1>Notebooks de Alta Performance</h1>
+                            <p>Potência de desktop onde quer que você esteja.</p>
+                            <button class="btn-primary" data-target="notebooks">Conferir Modelos</button>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-btn prev" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-btn next" aria-label="Próximo"><i class="fa-solid fa-chevron-right"></i></button>
+                <div class="carousel-dots"></div>
+            </div>
+
+            <!-- SEÇÃO CATEGORIA 1: HARDWARE EM DESTAQUE -->
+            <section class="category-section container">
+                <div class="section-header">
+                    <h2><i class="fa-solid fa-server"></i> Hardware em Destaque</h2>
+                    <p>Componentes essenciais para máxima velocidade e renderização</p>
+                </div>
+                <div class="products-grid" id="home-hardware-grid">
+                    <!-- Injetado via JS -->
+                </div>
+            </section>
+
+            <!-- SEÇÃO CATEGORIA 2: ACESSÓRIOS E PERIFÉRICOS -->
+            <section class="category-section alt-bg">
+                <div class="container">
+                    <div class="section-header">
+                        <h2><i class="fa-solid fa-headset"></i> Acessórios e Periféricos</h2>
+                        <p>Ergonomia, tempo de resposta e iluminação RGB</p>
+                    </div>
+                    <div class="products-grid" id="home-peripherals-grid">
+                        <!-- Injetado via JS -->
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- PÁGINA 2: NOTEBOOKS -->
+        <section id="notebooks" class="page-section container">
+            <div class="page-banner">
+                <h1>Notebooks & Ultrabooks</h1>
+                <p>Equipamentos portáteis de alta performance para trabalho e jogos.</p>
+            </div>
+            <div class="products-grid" id="notebooks-grid"></div>
+        </section>
+
+        <!-- PÁGINA 3: PLACAS DE VÍDEO -->
+        <section id="placas" class="page-section container">
+            <div class="page-banner">
+                <h1>Placas de Vídeo (GPUs)</h1>
+                <p>Gráficos ultrarrealistas e poder de processamento paralelo.</p>
+            </div>
+            <div class="products-grid" id="placas-grid"></div>
+        </section>
+
+        <!-- PÁGINA 4: PERIFÉRICOS -->
+        <section id="perifericos" class="page-section container">
+            <div class="page-banner">
+                <h1>Periféricos Gamer & Office</h1>
+                <p>Mouses, teclados mecânicos, headsets e monitores.</p>
+            </div>
+            <div class="products-grid" id="perifericos-grid"></div>
+        </section>
+
+        <!-- PÁGINA 5: CONTATO -->
+        <section id="contato" class="page-section container">
+            <div class="page-banner">
+                <h1>Central de Atendimento</h1>
+                <p>Dúvidas sobre compatibilidade ou pedidos? Fale com nossos especialistas.</p>
+            </div>
+            <div class="contact-wrapper">
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nome Completo</label>
+                        <input type="text" id="name" required placeholder="Ex: João Silva">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" required placeholder="joao@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Assunto</label>
+                        <select id="subject">
+                            <option>Dúvida sobre Produto</option>
+                            <option>Suporte Técnico</option>
+                            <option>Garantia e Trocas</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" rows="5" required placeholder="Como podemos ajudar?"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- PÁGINAS INSTITUCIONAIS (LINKS DO RODAPÉ) -->
+        <section id="institucional" class="page-section container">
+            <div class="institutional-box" id="institutional-content">
+                <!-- Conteúdo dinâmico baseado no link clicado no rodapé -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- NOTIFICAÇÃO TOAST -->
+    <div id="toast" class="toast">Produto adicionado ao carrinho!</div>
+
+    <!-- RODAPÉ COMPLETO E FUNCIONAL -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="#home" class="logo" data-target="home">
+                    <i class="fa-solid fa-microchip"></i> Tech<span>Core</span>
+                </a>
+                <p>Sua loja especializada em hardware de alta performance, montagem de PCs e periféricos profissionais.</p>
+                <div class="social-links">
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://discord.com" target="_blank" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Departamentos</h3>
+                <ul>
+                    <li><a href="#notebooks" data-target="notebooks">Notebooks</a></li>
+                    <li><a href="#placas" data-target="placas">Placas de Vídeo</a></li>
+                    <li><a href="#perifericos" data-target="perifericos">Periféricos</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Institucional</h3>
+                <ul>
+                    <li><a href="#sobre" class="footer-info-link" data-info="sobre">Sobre Nós</a></li>
+                    <li><a href="#privacidade" class="footer-info-link" data-info="privacidade">Política de Privacidade</a></li>
+                    <li><a href="#trocas" class="footer-info-link" data-info="trocas">Trocas e Devoluções</a></li>
+                    <li><a href="#contato" data-target="contato">Central de Atendimento</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Atendimento</h3>
+                <p><i class="fa-solid fa-envelope"></i> suporte@techcore.com.br</p>
+                <p><i class="fa-solid fa-phone"></i> (11) 4002-8922</p>
+                <p><i class="fa-solid fa-clock"></i> Seg a Sex: 08h às 18h</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 TechCore Informática Ltda. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
